@@ -1,25 +1,35 @@
 const db = require('../db');
-
+const formatearFecha = (fecha) => fecha.toISOString().split('T')[0];
+ 
 const getAll = async (req, res) => {
   try {
     const [rows] = await db.query('SELECT * FROM alumnos_curso');
-    res.json(rows);
+    const datos = rows.map(alumno => ({
+      ...alumno,
+      fecha_nacimiento: formatearFecha(alumno.fecha_nacimiento)
+    }));
+    res.json(datos);
   } catch (error) {
     res.status(500).send(error.message);
   }
 };
-
+ 
 const getById = async (req, res) => {
   try {
     var id = req.params.id;
     const query = 'SELECT * FROM alumnos_curso WHERE id = ?';
     const [rows] = await db.query(query, [id]);
-    res.json(rows[0]);
+    if (!rows[0]) return res.status(404).json({ error: 'Alumno no encontrado' });
+    const alumno = {
+      ...rows[0],
+      fecha_nacimiento: formatearFecha(rows[0].fecha_nacimiento)
+    };
+    res.json(alumno);
   } catch (error) {
     res.status(500).send(error.message);
   }
 };
-
+ 
 const create = async (req, res) => {
   const { nombre_completo, correo, fecha_nacimiento, promedio, asistencia_porcentaje, activo } = req.body;
   if (!nombre_completo || !correo || !fecha_nacimiento || promedio === undefined || asistencia_porcentaje === undefined || activo === undefined) {
@@ -33,7 +43,7 @@ const create = async (req, res) => {
     res.status(500).send(error.message);
   }
 };
-
+ 
 const update = async (req, res) => {
   const { nombre_completo, correo, fecha_nacimiento, promedio, asistencia_porcentaje, activo } = req.body;
   if (!nombre_completo || !correo || !fecha_nacimiento || promedio === undefined || asistencia_porcentaje === undefined || activo === undefined) {
@@ -48,7 +58,7 @@ const update = async (req, res) => {
     res.status(500).send(error.message);
   }
 };
-
+ 
 const remove = async (req, res) => {
   try {
     const [result] = await db.query('DELETE FROM alumnos_curso WHERE id = ?', [req.params.id]);
@@ -58,5 +68,6 @@ const remove = async (req, res) => {
     res.status(500).send(error.message);
   }
 };
-
+ 
 module.exports = { getAll, getById, create, update, remove };
+ 
