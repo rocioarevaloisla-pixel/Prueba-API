@@ -89,15 +89,14 @@ CREATE DATABASE IF NOT EXISTS tablas_api;
 
 USE tablas_api;
 
-CREATE TABLE IF NOT EXISTS alumnos_curso (
-    id INT NOT NULL AUTO_INCREMENT,
-    nombre_completo VARCHAR(150) NOT NULL,
-    correo VARCHAR(150) NOT NULL,
-    fecha_nacimiento DATE NOT NULL,
-    promedio DECIMAL(4,2) NOT NULL,
-    asistencia_porcentaje DECIMAL(5,2) NOT NULL,
-    activo BOOLEAN NOT NULL DEFAULT TRUE,
-    PRIMARY KEY (id)
+CREATE TABLE alumnos_curso (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  nombre_completo VARCHAR(150) NOT NULL,
+  correo VARCHAR(150) NOT NULL,
+  fecha_nacimiento DATE NOT NULL,
+  promedio DECIMAL(4,2) NOT NULL,
+  asistencia_porcentaje DECIMAL(5,2) NOT NULL,
+  activo BOOLEAN NOT NULL DEFAULT TRUE
 );
 ```
 

@@ -89,15 +89,14 @@ CREATE DATABASE IF NOT EXISTS tablas_api;
 
 USE tablas_api;
 
-CREATE TABLE IF NOT EXISTS pagos_servicios (
-    id INT NOT NULL AUTO_INCREMENT,
-    servicio VARCHAR(100) NOT NULL,
-    referencia VARCHAR(50) NOT NULL,
-    monto DECIMAL(12,2) NOT NULL,
-    fecha_pago DATE NOT NULL,
-    metodo VARCHAR(40) NOT NULL,
-    confirmado BOOLEAN NOT NULL DEFAULT FALSE,
-    PRIMARY KEY (id)
+CREATE TABLE pagos_servicios (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  servicio VARCHAR(100) NOT NULL,
+  referencia VARCHAR(50) NOT NULL,
+  monto DECIMAL(12,2) NOT NULL,
+  fecha_pago DATE NOT NULL,
+  metodo VARCHAR(40) NOT NULL,
+  confirmado BOOLEAN NOT NULL DEFAULT FALSE
 );
 ```
 
