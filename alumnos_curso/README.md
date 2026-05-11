@@ -205,12 +205,13 @@ Retorna un alumno específico por su ID.
 ```json
 {
     "id": 1,
-    "nombre_completo": "Juan Pérez González",
-    "correo": "juan.perez@mail.com",
-    "fecha_nacimiento": "2000-05-15",
-    "promedio": "6.50",
+    "nombre_completo": "Bodoque",
+    "correo": "TormentaChina@mail.com",
+    "fecha_nacimiento": "2006-05-15",
+    "promedio": "4.80",
     "asistencia_porcentaje": "88.50",
     "activo": 1
+    "documento_identidad" : "123456789"
 }
 ```
 
@@ -224,12 +225,13 @@ Actualiza un alumno completo por su ID.
 
 ```json
 {
-    "nombre_completo": "Juan Pérez Actualizado",
-    "correo": "juan.nuevo@mail.com",
-    "fecha_nacimiento": "2000-05-15",
-    "promedio": 7.20,
+    "nombre_completo": "Bodoque Actualizado",
+    "correo": "31.nuevo@mail.com",
+    "fecha_nacimiento": "2006-05-15",
+    "promedio": 6.00,
     "asistencia_porcentaje": 92.00,
     "activo": true
+    "documento_identidad": "987654321"
 }
 ```
 

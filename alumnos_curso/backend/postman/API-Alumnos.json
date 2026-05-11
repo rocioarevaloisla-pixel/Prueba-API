@@ -18,7 +18,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"nombre_completo\": \"Juan Pérez González\",\n    \"correo\": \"juan.perez@mail.com\",\n    \"fecha_nacimiento\": \"2000-05-15\",\n    \"promedio\": 6.50,\n    \"asistencia_porcentaje\": 88.50,\n    \"activo\": true\n}",
+          "raw": "{\n    \"nombre_completo\": \"Bodoque\",\n    \"correo\": \"TormentaChina@mail.com\",\n    \"fecha_nacimiento\": \"2006-05-15\",\n    \"promedio\": 4.80,\n    \"asistencia_porcentaje\": 88.50,\n    \"activo\": true,\n    \"documento_identidad\": \"123456789\"  \n}",
           "options": {
             "raw": {
               "language": "json"
@@ -91,7 +91,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"nombre_completo\": \"Juan Pérez Actualizado\",\n    \"correo\": \"juan.nuevo@mail.com\",\n    \"fecha_nacimiento\": \"2000-05-15\",\n    \"promedio\": 7.20,\n    \"asistencia_porcentaje\": 92.00,\n    \"activo\": true\n}",
+          "raw": "{\n    \"nombre_completo\": \"Bodoque Actualizado\",\n    \"correo\": \"31.nuevo@mail.com\",\n    \"fecha_nacimiento\": \"2006-05-15\",\n    \"promedio\": 6.00,\n    \"asistencia_porcentaje\": 92.00,\n    \"activo\": true,\n    \"documento_identidad\": \"987654321\"\n}",
           "options": {
             "raw": {
               "language": "json"

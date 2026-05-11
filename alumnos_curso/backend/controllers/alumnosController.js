@@ -71,7 +71,8 @@ const create = async (req, res) => {
     fecha_nacimiento,
     promedio,
     asistencia_porcentaje,
-    activo
+    activo,
+    documento_identidad
   } = req.body;
 
   if (
@@ -80,7 +81,8 @@ const create = async (req, res) => {
     !fecha_nacimiento ||
     promedio === undefined ||
     asistencia_porcentaje === undefined ||
-    activo === undefined
+    activo === undefined ||
+    documento_identidad === undefined
   ) {
     return res.status(400).json({
       error: 'Todos los campos son obligatorios'
@@ -97,9 +99,10 @@ const create = async (req, res) => {
         fecha_nacimiento,
         promedio,
         asistencia_porcentaje,
-        activo
+        activo,
+        documento_identidad
       )
-      VALUES (?, ?, ?, ?, ?, ?)
+      VALUES (?, ?, ?, ?, ?, ?, ?)
     `;
 
     const [result] = await db.query(query, [
@@ -108,7 +111,8 @@ const create = async (req, res) => {
       fecha_nacimiento,
       promedio,
       asistencia_porcentaje,
-      activo
+      activo,
+      documento_identidad
     ]);
 
     res.status(201).json({
@@ -135,7 +139,8 @@ const update = async (req, res) => {
     fecha_nacimiento,
     promedio,
     asistencia_porcentaje,
-    activo
+    activo, 
+    documento_identidad
   } = req.body;
 
   if (
@@ -144,7 +149,8 @@ const update = async (req, res) => {
     !fecha_nacimiento ||
     promedio === undefined ||
     asistencia_porcentaje === undefined ||
-    activo === undefined
+    activo === undefined ||
+    documento_identidad === undefined
   ) {
     return res.status(400).json({
       error: 'Todos los campos son obligatorios'
@@ -161,7 +167,8 @@ const update = async (req, res) => {
         fecha_nacimiento = ?,
         promedio = ?,
         asistencia_porcentaje = ?,
-        activo = ?
+        activo = ?,
+        documento_identidad = ? 
       WHERE id = ?
     `;
 
@@ -172,6 +179,7 @@ const update = async (req, res) => {
       promedio,
       asistencia_porcentaje,
       activo,
+      documento_identidad,
       req.params.id
     ]);
 
