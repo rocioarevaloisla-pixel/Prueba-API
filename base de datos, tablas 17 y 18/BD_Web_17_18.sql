@@ -12,7 +12,8 @@ CREATE TABLE alumnos_curso (
   fecha_nacimiento DATE NOT NULL,
   promedio DECIMAL(4,2) NOT NULL,
   asistencia_porcentaje DECIMAL(5,2) NOT NULL,
-  activo BOOLEAN NOT NULL DEFAULT TRUE
+  activo BOOLEAN NOT NULL DEFAULT TRUE,
+  documento_identidad VARCHAR(30) UNIQUE
 );
  
 CREATE TABLE pagos_servicios (
@@ -21,7 +22,6 @@ CREATE TABLE pagos_servicios (
   referencia VARCHAR(50) NOT NULL,
   monto DECIMAL(12,2) NOT NULL,
   fecha_pago DATE NOT NULL,
-  metodo VARCHAR(40) NOT NULL,
-  confirmado BOOLEAN NOT NULL DEFAULT FALSE
+  metodo VARCHAR(40) NOT NULL
 );
  
