@@ -96,7 +96,6 @@ CREATE TABLE pagos_servicios (
   monto DECIMAL(12,2) NOT NULL,
   fecha_pago DATE NOT NULL,
   metodo VARCHAR(40) NOT NULL,
-  confirmado BOOLEAN NOT NULL DEFAULT FALSE
 );
 ```
 
@@ -159,7 +158,6 @@ Crea un nuevo pago de servicio.
     "monto": 15000.00,
     "fecha_pago": "2024-03-10",
     "metodo": "transferencia",
-    "confirmado": false
 }
 ```
 
@@ -189,7 +187,6 @@ Retorna todos los pagos registrados.
         "monto": "15000.00",
         "fecha_pago": "2024-03-10",
         "metodo": "transferencia",
-        "confirmado": 0
     }
 ]
 ```
@@ -210,7 +207,6 @@ Retorna un pago específico por su ID.
     "monto": "15000.00",
     "fecha_pago": "2024-03-10",
     "metodo": "transferencia",
-    "confirmado": 0
 }
 ```
 
@@ -224,12 +220,11 @@ Actualiza un pago completo por su ID.
 
 ```json
 {
-    "servicio": "Agua potable actualizado",
-    "referencia": "REF-2024-001",
+    "servicio": "Luz actualizado",
+    "referencia": "REF-2025-001",
     "monto": 18500.00,
     "fecha_pago": "2024-03-15",
     "metodo": "tarjeta",
-    "confirmado": true
 }
 ```
 

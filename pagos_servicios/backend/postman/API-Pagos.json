@@ -18,7 +18,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"servicio\": \"Agua potable\",\n    \"referencia\": \"REF-2024-001\",\n    \"monto\": 15000.00,\n    \"fecha_pago\": \"2024-03-10\",\n    \"metodo\": \"transferencia\",\n    \"confirmado\": false\n}",
+          "raw": "{\n    \"servicio\": \"Agua potable\",\n    \"referencia\": \"REF-2024-001\",\n    \"monto\": 15000.00,\n    \"fecha_pago\": \"2024-03-10\",\n    \"metodo\": \"transferencia\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -91,7 +91,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"servicio\": \"Agua potable actualizado\",\n    \"referencia\": \"REF-2024-001\",\n    \"monto\": 18500.00,\n    \"fecha_pago\": \"2024-03-15\",\n    \"metodo\": \"tarjeta\",\n    \"confirmado\": true\n}",
+          "raw": "{\n    \"servicio\": \"luz actualizado\",\n    \"referencia\": \"REF-2025-001\",\n    \"monto\": 18500.00,\n    \"fecha_pago\": \"2024-03-15\",\n    \"metodo\": \"tarjeta\"\n}",
           "options": {
             "raw": {
               "language": "json"
