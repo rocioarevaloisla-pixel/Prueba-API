@@ -1,0 +1,137 @@
+{
+  "info": {
+    "_postman_id": "a1b2c3d4-0001-0001-0001-ef1234567890",
+    "name": "API Alumnos Curso",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "POST - Crear alumno",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"nombre_completo\": \"Juan Pérez González\",\n    \"correo\": \"juan.perez@mail.com\",\n    \"fecha_nacimiento\": \"2000-05-15\",\n    \"promedio\": 6.50,\n    \"asistencia_porcentaje\": 88.50,\n    \"activo\": true\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/alumnos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "alumnos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET - Listar alumnos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/alumnos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "alumnos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET - Obtener alumno por ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/alumnos/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "alumnos",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PUT - Actualizar alumno",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"nombre_completo\": \"Juan Pérez Actualizado\",\n    \"correo\": \"juan.nuevo@mail.com\",\n    \"fecha_nacimiento\": \"2000-05-15\",\n    \"promedio\": 7.20,\n    \"asistencia_porcentaje\": 92.00,\n    \"activo\": true\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/alumnos/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "alumnos",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE - Eliminar alumno",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/alumnos/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "alumnos",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
