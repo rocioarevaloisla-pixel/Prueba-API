@@ -75,15 +75,14 @@ const create = async (req, res) => {
     documento_identidad
   } = req.body;
 
-  if (
-    !nombre_completo ||
-    !correo ||
-    !fecha_nacimiento ||
-    promedio === undefined ||
-    asistencia_porcentaje === undefined ||
-    activo === undefined ||
-    documento_identidad === undefined
-  ) {
+ if (
+  !nombre_completo ||
+  !correo ||
+  !fecha_nacimiento ||
+  promedio === undefined ||
+  asistencia_porcentaje === undefined ||
+  activo === undefined
+) {
     return res.status(400).json({
       error: 'Todos los campos son obligatorios'
     });
@@ -144,14 +143,13 @@ const update = async (req, res) => {
   } = req.body;
 
   if (
-    !nombre_completo ||
-    !correo ||
-    !fecha_nacimiento ||
-    promedio === undefined ||
-    asistencia_porcentaje === undefined ||
-    activo === undefined ||
-    documento_identidad === undefined
-  ) {
+  !nombre_completo ||
+  !correo ||
+  !fecha_nacimiento ||
+  promedio === undefined ||
+  asistencia_porcentaje === undefined ||
+  activo === undefined
+){
     return res.status(400).json({
       error: 'Todos los campos son obligatorios'
     });
